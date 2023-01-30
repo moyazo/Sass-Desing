@@ -1,0 +1,21 @@
+$generalDimension : 100%;
+$bodywidth : 100vw;
+$bodyheight : 100vh;
+$flexDisplay : flex;
+$flexFlow1 : column;
+$flexFlow2 : row;
+$justifyCenter : center;
+$justifyAround : space-around;
+$alignCenter : center;
+
+body {
+    width: $generalDimension;
+    height: $generalDimension;
+    margin: 0;
+    display: $flexDisplay;
+    flex-flow: $flexFlow1;
+    justify-content: $justifyCenter;
+    align-items: $alignCenter;
+}
+
+
