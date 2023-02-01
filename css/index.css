@@ -1,6 +1,6 @@
 body {
   width: 100vw;
-  height: 100vh;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,350 +18,147 @@ body {
   overflow-x: hidden;
 }
 
-#container-1, #container-2 {
+h2 {
   width: 100%;
-  height: 40rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: "";
-      -ms-flex-align: "";
-          align-items: "";
-  margin: 1rem 0;
-}
-
-#container-1 :nth-child(1n+1), #container-2 :nth-child(1n+1) {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0.5rem;
-  background-color: rgb(106, 106, 255);
-}
-
-#container-1 ::-webkit-scrollbar, #container-2 ::-webkit-scrollbar {
-  display: none;
-}
-
-#foot {
-  border-top: 0.3rem solid black;
-  margin-top: 2rem;
-  padding: 2rem 0;
   text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem 0;
+  border-bottom: 0.15rem orange solid;
+}
+
+#container-info {
+  width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgb(237, 237, 237);
+  padding: 1.5rem;
 }
-
-td:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:not(:hover) {
+#container-info > :hover {
+  padding: 1rem;
   color: white;
-  -webkit-transform: scale();
-          transform: scale();
+  background-color: orange;
+  cursor: pointer;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
+#container-info > :hover img {
+  width: 25%;
+}
+#container-info > :hover .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#container-info > :not(:hover) {
+  padding: 0;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#container-info > :not(:hover) .images {
+  display: none;
+}
 
-td:hover {
+.info-1, .info-4, .info-3, .info-2 {
+  font-size: 0.9rem;
+}
+
+.item-1:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:hover {
+.item-2:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:hover {
+.item-3:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:hover {
+.item-4:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:hover {
+.item-5:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-td:hover {
+.item-6:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
-td:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
+.item-7:hover {
   color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:hover {
-  color: black;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-th:not(:hover) {
-  color: white;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-#container-1:hover, #container-2:hover {
-  background-color: yellow;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-#container-1:not(:hover), #container-2:not(:hover) {
-  color: blue;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-#container-2:hover {
-  background-color: yellow;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-}
-
-#container-2:not(:hover) {
-  color: blue;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
 }
 
 @media (min-width: 764px) {
-  .navbar-brand {
-    font-size: 1.75rem;
+  body {
+    width: 100vw;
+    height: 100vh;
   }
-  #navbar {
-    font-size: 1.75rem;
-    text-align: center;
+  h2 {
+    font-size: 2rem;
   }
-  #container-1 :nth-child(1n+1), #container-2 :nth-child(1n+1) {
-    font-size: changeToTabletLetter(0.25rem);
-    padding: changeToTabletPadding(2rem);
-    background-color: green;
-  }
-  #foot {
-    padding: changeToTabletPadding(3rem) 0;
-  }
-  img {
-    width: 150%;
+  #container-info {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 @media (min-width: 1024px) {
-  .navbar-brand {
-    font-size: 3.5rem;
+  h2 {
+    font-size: 3rem;
   }
-  #navbar {
-    font-size: 3.5rem;
-    text-align: center;
-  }
-  #container-1, #container-2 {
-    margin-top: 10rem;
-  }
-  #container-1 :nth-child(1n+1), #container-2 :nth-child(1n+1) {
-    font-size: 1.85rem;
-    padding: 1.5rem;
-    background-color: red;
-  }
-  #foot {
-    padding: changeToTabletPadding(3rem) 0;
-  }
-  img {
-    width: 150%;
+  #container-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
