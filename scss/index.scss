@@ -7,6 +7,7 @@ $flexFlow2 : row;
 $justifyCenter : center;
 $justifyAround : space-around;
 $alignCenter : center;
+$hover : false;
 
 @function flexFlow($flow){
     @return $flow;
@@ -29,128 +30,66 @@ $alignCenter : center;
     justify-content: $justify;
     align-items: $align;
 }
-@mixin invert($color){
+@mixin setColorLetter($color){
+    color: $color;
+}
+@mixin setColor($color){
     background-color: $color;
 }
 
 body {
-    @include generalDimensions($bodywidth, $bodyheight);
+    @include generalDimensions($bodywidth, auto);
     @include displayFlex($flexDisplay, $flexFlow1);
     @include flexPosition(space-between, $alignCenter);
     margin: 0;
     overflow-x: hidden;
 }
 
-#container-1{
-    @include generalDimensions($generalDimension, 40rem);
-    @include displayFlex($flexDisplay, $flexFlow1);
-    @include flexPosition($justifyAround, '');
-    margin: 1rem 0;
-}
-#container-2{
-    @extend #container-1
-}
-    #container-1 :nth-child(1n+1){
-        width: $generalDimension;
-        @include displayFlex($flexDisplay, $flexFlow1);
-        padding:.5rem;
-        background-color: rgb(106, 106, 255);
-    }
-#container-1 ::-webkit-scrollbar {
-    display: none;
-}
-
-#foot{
-    border-top: .3rem solid black;
-    margin-top: 2rem;
-    padding: 2rem 0;
+h2{
+    width: $generalDimension;
     text-align: center;
-    display: flex;
-    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: changeToPadding(2rem) 0;
+    border-bottom: .15rem change-color(orange) solid
 }
-  @for $td from 0 through 6{
-    td:hover{
-        color: black;
-        transform: scale();
-        transition: 1s ease;
-    }
-    td:not(:hover){
+
+#container-info{
+    @include generalDimensions($generalDimension, $generalDimension);
+    @include displayFlex($flexDisplay, $flexFlow1);
+    @include flexPosition($justifyCenter, $alignCenter);
+    @include setColor(rgb(237, 237, 237));
+    padding: changeToPadding(2.5rem);
+    > :hover{
+        padding: changeToPadding(2rem);
         color: white;
-        transform: scale();
+        @include setColor(orange);
+        cursor: pointer;
         transition: 1s ease;
+        @if($hover == false){
+            .images{
+                @include displayFlex($flexDisplay, row);
+                @include flexPosition($justifyCenter, $alignCenter);
+            }
+            $hover : true;
+        }
     }
-  }
-
-@for $th from 0 through 6{
-    th:hover{
-        color: black;
-        transform: scale();
+    > :not(:hover){
+        padding: 0;
         transition: 1s ease;
-    }
-    th:not(:hover){
-        color: white;
-        transform: scale();
-        transition: 1s ease;
+        @if($hover == false){
+            .images{
+               display: none;
+            }
+        }  
     }
 }
 
-@for $container from 1 through 2{
-    #container-#{$container}:hover{
-        background-color: yellow;
-        transform: scale();
-        transition: 1s ease;
-    }
-    #container-#{$container}:not(:hover){
-        color: blue;
-        transform: scale();
-        transition: 1s ease;
+@for $item from 1 through 7{
+    .item-#{$item}:hover{
+        @include setColorLetter(black);
+        transition: .5s ease;
     }
 }
 
-
-@media (min-width: 764px){
-    .navbar-brand{
-        font-size: changeToLetter(.75rem);
-    }
-    #navbar{
-        font-size: changeToLetter(.75rem);
-        text-align: center;
-    }
-    #container-1 :nth-child(1n+1){
-        font-size: changeToTabletLetter(.25rem);
-        padding: changeToTabletPadding(2rem);
-        @include invert(green)
-    }
-    #foot{
-        padding: changeToTabletPadding(3rem) 0;
-    }
-    img{
-        width: $generalDimension * 1.5;
-    }
-}
-
-@media (min-width: 1024px){
-    .navbar-brand{
-        font-size: changeToLetter(2.5rem);
-    }
-    #navbar{
-        font-size: changeToLetter(2.5rem);
-        text-align: center;
-    }
-
-    #container-1{
-        margin-top: 10rem;
-    }
-    #container-1 :nth-child(1n+1){
-        font-size: changeToLetter(.85rem);
-        padding: changeToPadding(2.5rem);
-        @include invert(red)
-    }
-    #foot{
-        padding: changeToTabletPadding(3rem) 0;
-    }
-    img{
-        width: $generalDimension * 1.5;
-    }
-}
 
