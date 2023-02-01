@@ -66,6 +66,9 @@ h2{
         @include setColor(orange);
         cursor: pointer;
         transition: 1s ease;
+        img{
+            width: 25%;
+        }
         @if($hover == false){
             .images{
                 @include displayFlex($flexDisplay, row);
@@ -85,10 +88,48 @@ h2{
     }
 }
 
+.info-1{
+    font-size: changeToLetter(-.1rem);
+}
+@for $info from 1 through 4{
+    .info-#{$info}{
+        @extend .info-1;
+    }
+}
+
 @for $item from 1 through 7{
     .item-#{$item}:hover{
         @include setColorLetter(black);
         transition: .5s ease;
+    }
+}
+
+
+
+
+
+@media (min-width: 764px){
+    body {
+        @include generalDimensions($bodywidth, $bodyheight);
+    }
+
+    h2{
+        font-size: changeToLetter(1rem);
+    }
+
+    
+#container-info{
+    @include flexPosition(space-around, $alignCenter);
+}
+}
+
+@media (min-width: 1024px){
+    h2{
+        font-size: changeToLetter(2rem);
+    }
+    #container-info{
+        @include displayFlex($flexDisplay,$flexFlow2 );
+        @include flexPosition(space-around, $alignCenter);
     }
 }
 
